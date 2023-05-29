@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+        integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body style="background-color: #3f65914a;">
+    <div class="container">
+        <img src="./images/My account.png" style="width:400px; margin-left:10vw; margin-top: 20px; margin-bottom: 20px;"
+            alt="">
+        <div class="alert alert-secondary text-center" role="alert" id="balance">
+            Balance:
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <select class="form-select mb-3" aria-label="Default select example" id="type">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="description" placeholder="description">
+                    <label for="description">Description</label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="amount" placeholder="amount">
+                    <label for="amount">Amount</label>
+                </div>
+                <div class="d-grid gap-2 mt-3">
+                    <button class="btn btn-primary" type="button" onclick="addNewAction()">Add</button>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th></th>
+                            <th></th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="actions">
+
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./scripts.js" type="module"></script>
+</body>
+
+</html>
